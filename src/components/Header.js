@@ -1,7 +1,14 @@
+import React from 'react';
+import Nav from './Nav';
+import Hero from './Hero'
 
-
+const Header = () => {
 return(
-    <header>
-        <img src="Logo.svg" alt="Little Lemon Logo"></img>
+    <header className="header">
+        <Nav />
+        <Hero />
     </header>
-)
+);
+};
+
+export default Header;

@@ -1,7 +1,11 @@
+import React from 'react';
+import logo from "./assets/Logo.svg";
 
+const Nav = () => {
 
 return(
     <nav>
+        <img src={logo} alt="Little Lemon Logo" className="logo" />
         <ul>
             <li>
                 <a href="">Home</a>
@@ -24,5 +28,5 @@ return(
         </ul>
     </nav>
 )
-
+}
 export default Nav;

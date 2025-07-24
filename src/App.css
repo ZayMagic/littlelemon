@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+/*
+  Little Lemon Website - Global Styles
+  Style Guide:
+    Primary Colors: #495E57, #F4CE14
+    Secondary Colors: #EE9972, #FBDABB, #EDEFEE, #333333
+    Fonts: 'Markazi Text' for headings, 'Karla' for body text
+*/
+
+/* ========== Import Google Fonts ========== */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@400;500;600;700&display=swap');
+
+/* ========== Base Styles ========== */
+body {
+  font-family: 'Karla', sans-serif; /* Set default font to Karla */
+  background-color: #EDEFEE; /* Light grey background */
+  margin: 0; /* Remove default browser margin */
+  padding: 0; /* Remove default browser padding */
+  color: #333333; /* Dark grey text for readability */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5 {
+  font-family: 'Markazi Text', serif; /* Use Markazi Text for all headings */
+  margin: 0; /* Remove default margin */
+  line-height: 1.2; /* Tight line spacing for headings */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 64px; /* Display title size */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 40px; /* Subtitle or section heading size */
+}
+
+p {
+  line-height: 1.5; /* Comfortable line spacing */
+  font-size: 16px; /* Standard paragraph font size */
+  max-width: 65ch; /* Max readable line length */
+}
+
+/* ========== Layout ========== */
+.container {
+  max-width: 1200px; /* Center content with max width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 1rem; /* Add side padding */
+}
+
+/* ========== Header ========== */
+header {
+  display: flex; /* Use Flexbox to layout header items */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Vertically center content */
+  padding: 1rem; /* Padding inside the header */
+  background-color: white; /* White header background */
+}
+
+.nav-links {
+  display: flex; /* Flex layout for navigation links */
+  gap: 1.5rem; /* Spacing between nav items */
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background-color: #495E57; /* Dark green background */
+  color: white; /* White text */
+  display: grid; /* Grid layout for text and image */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  align-items: center; /* Center items vertically */
+  padding: 2rem; /* Spacing inside the hero section */
+}
+
+.hero-text h1 {
+  color: #F4CE14; /* Bright yellow for attention */
+}
+
+.hero button {
+  background-color: #F4CE14; /* Bright yellow CTA button */
+  border: none; /* No border */
+  padding: 0.75rem 1.5rem; /* Button padding */
+  font-weight: bold; /* Bold text */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 1rem; /* Spacing above button */
+}
+
+div.hero-image img{
+  width: 100%; /* Make image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px; /* Optional: Rounded corners for polish */
+}
+
+/* ========== Specials Section ========== */
+.specials {
+  text-align: center; /* Center all text */
+  padding: 3rem 1rem; /* Top/bottom and side padding */
+}
+
+.specials-header {
+  display: flex; /* Flex layout for heading and button */
+  justify-content: space-between; /* Push items to edges */
+  align-items: center; /* Align vertically */
+  margin-bottom: 2rem; /* Space below the header */
+}
+
+.special-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.special-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.special-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.special-card h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.special-card p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.special-card button {
+  align-self: flex-start;
+}
+
+
+.price {
+  color: #EE9972; /* Soft orange for pricing */
+  font-weight: bold; /* Highlight the price */
+}
+
+.order-btn {
+  margin-top: 1rem; /* Space above button */
+  font-weight: bold; /* Bold text */
+  display: flex; /* Flex layout for icon and text */
+  align-items: center; /* Align icon and text */
+  gap: 0.5rem; /* Space between icon and text */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #495E57; /* Optional: match theme */
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #495E57; /* Match primary color */
+  color: white; /* White text */
+  padding: 2rem; /* Space inside footer */
+  text-align: center; /* Centered text */
+  font-size: 14px; /* Small font for footer */
 }
