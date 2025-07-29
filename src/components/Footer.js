@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <p>&copy; 2025 Little Lemon. All rights reserved.</p>
-            <p>Contact us by clicking <a href="">here</a></p>
+            <p>Contact us by clicking here</p>
         </footer>
     )
 }

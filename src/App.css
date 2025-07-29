@@ -46,7 +46,7 @@ p {
 }
 
 /* ========== Header ========== */
-header {
+header Nav{
   display: flex; /* Use Flexbox to layout header items */
   justify-content: space-between; /* Space between logo and nav */
   align-items: center; /* Vertically center content */
@@ -57,6 +57,7 @@ header {
 .nav-links {
   display: flex; /* Flex layout for navigation links */
   gap: 1.5rem; /* Spacing between nav items */
+  list-style-type: none /*Gets rid of bullet points*/
 }
 
 /* ========== Hero Section ========== */
