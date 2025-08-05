@@ -28,6 +28,21 @@ _Not deployed yet._ You can run it locally by following the instructions below.
 ### Prerequisites
 
 - Node.js and npm installed
+- ---
+
+## Future Working Features
+Backend integration for login and reservations
+
+Store and display user orders
+
+Form validation and feedback
+
+Dark mode toggle
+
+Deployment to Vercel or Netlify
+
+
+Built with ❤️ by Isaiah Blemur for the Meta Front-End Developer Capstone Project.
 
 ### Installation
 
@@ -44,19 +59,5 @@ npm install
 # Start the development server
 npm start
 
----
 
-## Future Working Features
-Backend integration for login and reservations
-
-Store and display user orders
-
-Form validation and feedback
-
-Dark mode toggle
-
-Deployment to Vercel or Netlify
-
-
-Built with ❤️ by Isaiah Blemur for the Meta Front-End Developer Capstone Project.
 
