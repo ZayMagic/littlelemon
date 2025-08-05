@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import SpecialCard from './SpecialCard';
 import greekSalad from './assets/greek salad.jpg';
 import bruschetta from './assets/bruchetta.svg';
@@ -26,15 +27,16 @@ const specialsData = [
 ];
 
 const Specials = () =>{
+  const navigate = useNavigate();
     return(
         <section className ="specials">
             <div className ="specials-header">
                 <h2>This week's specials!</h2>
-                <button className="menu-btn">Online Menu</button>
+                <button className="menu-btn" onClick={() => navigate('/menu')}>Online Menu</button>
             </div>
             <div className='special-cards'>
                 {specialsData.map((item,index) => (
-                    <SpecialCard 
+                    <SpecialCard
                     key={index}
                     title={item.title}
                     price={item.price}

@@ -46,19 +46,23 @@ p {
 }
 
 /* ========== Header ========== */
-header Nav{
-  display: flex; /* Use Flexbox to layout header items */
-  justify-content: space-between; /* Space between logo and nav */
-  align-items: center; /* Vertically center content */
-  padding: 1rem; /* Padding inside the header */
-  background-color: white; /* White header background */
+
+.logo {
+  height: 40px;
 }
 
-.nav-links {
-  display: flex; /* Flex layout for navigation links */
-  gap: 1.5rem; /* Spacing between nav items */
-  list-style-type: none /*Gets rid of bullet points*/
+.navbar ul li {
+  margin: 0.5rem 0;
 }
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
 
 /* ========== Hero Section ========== */
 .hero {
