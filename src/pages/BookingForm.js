@@ -45,6 +45,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
             id="res-date"
             value={selectedDate}
             onChange={handleDateChange}
+            aria-label="Date"
             required
           />
 
@@ -53,6 +54,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
             id="res-time"
             value={resTime}
             onChange={(e) => setResTime(e.target.value)}
+            aria-label="Time"
             required
           >
             <option value="" disabled>Select a time</option>
@@ -69,6 +71,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
             max="10"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
+            aria-label="Guests"
             required
           />
 
@@ -77,12 +80,13 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
             id="occasion"
             value={occasion}
             onChange={(e) => setOccasion(e.target.value)}
+            aria-label="Occassion"
           >
             <option value="Birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
           </select>
 
-          <input type="submit" value="Make Your Reservation" />
+          <input type="submit" value="Make Your Reservation" aria-label="On Click" />
         </form>
       </section>
     </>
