@@ -1,16 +1,24 @@
 import React from "react";
+import BookingForm from "./BookingForm";
+import { useNavigate } from "react-router-dom";
 
-const BookingPage = () => {
-    return(
-        <>
-            <h1 style={{ textAlign: 'center', marginTop: '2rem' }}>Let's Book!</h1>
-            <section className="booking">
-                <h2>Choose a Date</h2>
-                <button>Book Now</button>
-            </section>
+const BookingPage = ({ availableTimes, dispatch }) => {
+  const navigate = useNavigate();
 
-        </>
-    )
-}
+  const submitForm = (formData) => {
+    const success = window.submitAPI(formData);
+    if (success) {
+      navigate('/confirmation');
+    }
+  };
+
+  return (
+    <BookingForm
+      availableTimes={availableTimes}
+      dispatch={dispatch}
+      submitForm={submitForm}
+    />
+  );
+};
 
 export default BookingPage;
